@@ -1,9 +1,9 @@
 # Kovács Bence és Szabó Tamás Martin Vizsgaremek
 
 ## Project setup
-``
-#Backend
 
+#Backend
+``
 cd backend
 npm i
 npm start
@@ -11,6 +11,7 @@ npm start
 ``
 #Frontend
 
+``
 cd frontend
 npm i
 npm install
