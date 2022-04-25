@@ -24,9 +24,11 @@
               <router-link to="/products" class="nav-link">Admin products</router-link>
             </li>
             </span>
+            <span v-if="isLoggedIn">
             <li class="nav-item">
               <router-link to="/add" class="nav-link">Add</router-link>
             </li>
+            </span>
             <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         View More
