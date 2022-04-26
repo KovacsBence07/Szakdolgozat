@@ -1,13 +1,11 @@
 <template>
 <div class="container">
-  <div class="card-columns">
-      <div class="divbody">
-        <div class="columns" style="float: left">
-          <div
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" v-for="product in products"
+            :key="product._id">
+      <div
             class="card"
-            style="width: 30rem"
-            v-for="product in products"
-            :key="product._id"
+            style="width: 30rem" 
           >
             <img :src="product.img" alt="Card image cap" style="width: 100%" />
             <h1>{{ product.title }}</h1>
@@ -18,11 +16,9 @@
             </p>
             <p><button>Add to Cart</button></p>
           </div>
-        </div>
-      </div>
+    </div>
   </div>
 </div>
-  
 </template>
 
 <script>
@@ -61,6 +57,10 @@ export default {
 </script>
 
 <style>
+.col{
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
 .popularProducts {
   float: left;
   margin-left: 85px;

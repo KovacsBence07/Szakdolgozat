@@ -9,8 +9,8 @@
 <h2 style="text-align:center">Our Team</h2>
 <div class="row">
   <div class="column">
-    <div class="card">
-      <img src="" alt="Jane" >
+    <div class="card" style="40rem">
+      <img src="@/assets/images/bence.jpg" alt="Jane" >
       <div class="container">
         <h2>Jane Doe</h2>
         <p class="title">CEO & Founder</p>
@@ -22,8 +22,8 @@
   </div>
 
   <div class="column">
-    <div class="card">
-      <img src="" alt="Mike" style="width:100%">
+    <div class="card" style="40rem">
+      <img src="@/assets/images/Tomi.jpg" alt="Mike" style="max-width:300px">
       <div class="container">
         <h2>Mike Ross</h2>
         <p class="title">Art Director</p>
