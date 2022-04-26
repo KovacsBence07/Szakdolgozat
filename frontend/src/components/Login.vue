@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <h1>Login</h1>
+      <h1 class="title">Login</h1>
     <label for="email"><b>Email</b></label>
     <form @submit.prevent="Login">
       <input type="text" placeholder="Enter Email" name="email" v-model="email" required />
@@ -48,9 +48,8 @@ export default {
 </script>
 
 <style>
-/* Bordered form */
-form {
-  border: 3px solid #f1f1f1;
+.title{
+  font-size: 30px;
 }
 
 /* Full-width inputs */
@@ -58,21 +57,22 @@ input[type="text"],
 input[type="password"] {
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 10px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 2px solid black;
   box-sizing: border-box;
+  font-size: 15px;
 }
 
 /* Set a style for all buttons */
 button {
   background-color: #04aa6d;
   color: white;
-  padding: 14px 20px;
+  padding: 14px 25px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 30%;
 }
 
 /* Add a hover effect for buttons */
@@ -101,7 +101,7 @@ img.avatar {
 
 /* Add padding to containers */
 .container {
-  padding: 16px;
+  padding: 8px;
 }
 
 /* The "Forgot password" text */

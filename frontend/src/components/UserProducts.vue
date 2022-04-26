@@ -1,8 +1,8 @@
 <template>
-  <h3>asd</h3>
+  <div></div>
 </template>
 
-<script>
+<script setup>
 
 </script>
 
