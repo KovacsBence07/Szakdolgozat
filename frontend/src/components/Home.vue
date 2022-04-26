@@ -38,15 +38,14 @@ export default {
 </script>
 
 <style>
-.popularProducts{
+.popularProducts {
   float: left;
-  margin-left:85px;
-  
+  margin-left: 85px;
 }
-.divbody{
+.divbody {
   margin-left: 35px;
 }
-.welcomemess{
+.welcomemess {
   color: pink;
   font-size: 2rem;
   text-align: center;
@@ -75,13 +74,11 @@ export default {
   cursor: pointer;
   width: 60%;
   font-size: 18px;
-  border: black 1px  solid ;
+  border: black 1px solid;
   border-radius: 30px;
 }
 
 .card button:hover {
   opacity: 0.7;
 }
-
-
 </style>
