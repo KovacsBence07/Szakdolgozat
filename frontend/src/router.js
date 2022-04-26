@@ -39,6 +39,11 @@ const routes = [
         name: "home",
         component: ()=> import("./components/Home")
     },
+    {
+        path: "/about",
+        name: "about",
+        component: ()=> import("./components/About")
+    },
    
 ];
 
