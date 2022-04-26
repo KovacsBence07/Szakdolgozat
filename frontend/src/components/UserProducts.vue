@@ -1,21 +1,28 @@
 <template>
-  <div class="divbody">
-    <div class="columns" style="float: left">
-      <div
-        class="card"
-        style="width: 30rem"
-        v-for="product in products"
-        :key="product._id"
-      >
-        <img :src="product.img" alt="Card image cap" style="width: 100%" />
-        <h1> {{ product.title }}</h1>
-        <p class="price">{{product.price}} $</p>
-        <p>Description: {{product.description}}</p>
-        <p>{{product.published ? "In stock" : "Product is out of stock"}}</p>
-        <p><button>Add to Cart</button></p>
+<div class="container">
+  <div class="card-columns">
+      <div class="divbody">
+        <div class="columns" style="float: left">
+          <div
+            class="card"
+            style="width: 30rem"
+            v-for="product in products"
+            :key="product._id"
+          >
+            <img :src="product.img" alt="Card image cap" style="width: 100%" />
+            <h1>{{ product.title }}</h1>
+            <p class="price">{{ product.price }} $</p>
+            <p>Description: {{ product.description }}</p>
+            <p>
+              {{ product.published ? "In stock" : "Product is out of stock" }}
+            </p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </div>
       </div>
-    </div>
   </div>
+</div>
+  
 </template>
 
 <script>

@@ -65,7 +65,7 @@ export default {
     const router = useRouter();
     const route = useRoute();
     const isLoggedIn = ref(false);
-
+    
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
         isLoggedIn.value = true; // Ha be van jelentkezve
