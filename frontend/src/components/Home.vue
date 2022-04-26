@@ -3,23 +3,7 @@
     <span v-if="isLoggedIn">
       <h1 class="welcomemess">Welcome, {{ name }}</h1>
     </span>
-    <div class="divbody">
-
     
-    <div class="columns" style="float: left">
-<div class="card">
-  <img src="https://s13emagst.akamaized.net/products/28109/28108323/images/res_aeaf97305a247abc16d2a5d417cf67d0.jpg" alt="Denim Jeans" style="width:100%">
-  <h1>Tailored Jeans</h1>
-  <p class="price">$19.99</p>
-  <p>Some text about the jeans..</p>
-  <p><button>Add to Cart</button></p>
-</div>
-
-   
-    
-    
-  </div>
-  </div>
   </div>
 </template>
 

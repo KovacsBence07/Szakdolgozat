@@ -20,7 +20,9 @@
         <router-link to="/add" class="nav-link">Add Product</router-link>
         </span>
         <router-link to="/userProducts" class="nav-link">User products</router-link>
-        <a href="#">Contact</a>
+        
+        <router-link to="/about" class="nav-link">About</router-link>
+        
       </nav>
    
       <span v-if="isLoggedIn" class="buttons">

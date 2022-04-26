@@ -1,5 +1,7 @@
 <template>
-  <div class="submit-form">
+<div>
+    <h1 class="addProdtitle">Add Product as Admin</h1>
+<div class="submit-form">
       <div v-if="!submitted">
           <div class="form-group">
               <label for="title">Title</label>
@@ -19,13 +21,15 @@
               <label for="price">Price</label>
               <input type="number" name="price" id="price" class="form-control" required v-model="products.price">
           </div>
-          <button @click="saveProduct" class="btn btn-success">Submit</button>
+          <button @click="saveProduct" class="btn btn-success" id="submitbtn">Submit</button>
       </div>
       <div v-else>
           <h4>You submitted successfully!</h4>
           <button class="btn btn-success" @click="newProduct">Add</button>
       </div>
   </div>
+</div>
+  
 </template>
 
 <script>
@@ -73,7 +77,24 @@ export default {
 
 <style>
     .submit-form{
-        max-width: 300px;
+        max-width: 400px;
         margin: auto;
+        padding: 30px;
+    }
+    .form-group{
+        font-size: 20px;
+    }
+    .form-control{
+        font-size: 15px;
+    }
+    .addProdtitle{
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    #submitbtn{
+        padding: 10px 30px;
+        margin-top: 5px;
+        
     }
 </style>
