@@ -13,6 +13,7 @@ exports.create=(req,res)=>{
         title: req.body.title,
         description: req.body.description,
         price: req.body.price,
+        img: req.body.img,
         published: req.body.published ? req.body.published : false
     });
     // Save product in the database

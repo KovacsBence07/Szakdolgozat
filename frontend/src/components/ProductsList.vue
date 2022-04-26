@@ -43,7 +43,7 @@
           <label><strong>Title:</strong></label> {{ currentProduct.title }}
         </div>
         <div class="img">
-           <label><strong>Img:</strong></label>{{ currentProduct.img }}
+           <img :src="currentProduct.img" alt="Card image cap" style="width: 100%" />
         </div>
         <div>
           <label><strong>Description:</strong></label>
