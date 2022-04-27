@@ -1,17 +1,15 @@
 <template>
-  <div class="container">
-
-      <h1>Register</h1>
-    <form @submit.prevent="Register">
-      <input type="text" placeholder="Enter Email" name="email" v-model="email" required />
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" v-model="password" required />
-      <button type="submit" value="Register">Register</button>
-      <p>
-       Have an account? <router-link to="/login">Login Here</router-link>
-      </p>
-    </form>
-  </div>
+  <section>
+      <div class="auth">
+        <h1>Register</h1>
+        <form @submit.prevent="Register">
+          <input type="text" placeholder="Email" name="email" v-model="email" required />
+          <input type="password" placeholder="Password" name="psw" v-model="password" required/>
+          <button type="submit">Register</button>
+        </form>
+        <p class="register">Are you a member? <router-link to="/login">Login here</router-link></p>
+      </div>
+    </section>
 </template>
 
 <script>
