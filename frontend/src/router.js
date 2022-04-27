@@ -44,6 +44,11 @@ const routes = [
         name: "about",
         component: ()=> import("./components/About")
     },
+    {
+        path: "/cart",
+        name: "cart",
+        component: ()=> import("./components/Cart")
+    },
    
 ];
 

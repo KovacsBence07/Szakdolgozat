@@ -8,7 +8,7 @@
           <input type="password" placeholder="Password" name="psw" v-model="password" required/>
           <button type="submit">Login</button>
         </form>
-        <p class="register">Not a member? <router-link to="/register">Register here</router-link></p>
+        <p class="register">Not a member? <span>Register</span></p>
       </div>
     </section>
   </div>

@@ -51,12 +51,11 @@
             <router-link to="/login" class="fa fa-sign-in"> Log in</router-link>
 
             <router-link to="/register" class="fa fa-user"> Register</router-link>
-              <a href="#" id="cart">
-              <i class="fa fa-shopping-cart"></i> View Cart
-              </a>
+              
 
           </span>
-          
+              <router-link to="/cart" class="fa fa-shopping-cart"> Cart</router-link>
+              
         </div>
       </div>
       <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
@@ -127,7 +126,7 @@ export default {
 .menu2{
   float: right;
   display: flex;
-  margin-left: 1300px;
+  margin-left: 1200px;
 }
 .menu {
   background-color: #36486b;
@@ -144,6 +143,7 @@ export default {
   background-color: white;
   color: #36486b;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
