@@ -1,34 +1,34 @@
 <template>
 <div>
-    <h1 class="addProdtitle">Add Product as Admin</h1>
+    <h1 class="addProdtitle">Termék hozzáadása</h1>
 <div class="submit-form">
       <div v-if="!submitted">
           <div class="form-group">
-              <label for="title">Title</label>
+              <label for="title">Termék neve</label>
               <input type="text" class="form-control"
               id="title" required v-model="products.title" name="title"/>
           </div>
           <div class="form-group">
-              <label for="title">Image url</label>
+              <label for="title">Kép url</label>
               <input type="text" class="form-control"
               id="img" required v-model="products.img" name="img"/>
           </div>
           <div class="form-group">
-              <label for="description">Description</label>
+              <label for="description">Termék leírás</label>
               <input type="text" class="form-control" id="description" required v-model="products.description" name="description"/>
           </div>
           <div class="form-group">
-              <label for="price">Price</label>
+              <label for="price">Termék ára</label>
               <input type="number" name="price" id="price" class="form-control" required v-model="products.price">
           </div>
           <div class="d-flex justify-content-center">
-              <button @click="saveProduct" class="btn btn-success" id="submitbtn">Submit</button>
+              <button @click="saveProduct" class="btn btn-success" id="submitbtn">Hozzáadás</button>
           </div>
           
       </div>
       <div v-else>
-          <h4>You submitted successfully!</h4>
-          <button class="btn btn-success" @click="newProduct">Add</button>
+          <h4>A termék sikeresen felkerült a weboldalra!</h4>
+          <button class="btn btn-success" @click="newProduct">Tovább</button>
       </div>
       
   </div>

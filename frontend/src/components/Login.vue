@@ -9,8 +9,8 @@
 
             <div class="mb-md-5 mt-md-4 pb-5">
 
-              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-              <p class="text-white-50 mb-5">Please enter your login and password!</p>
+              <h2 class="fw-bold mb-2 text-uppercase">Bejelentkezés</h2>
+              <p class="text-white-50 mb-5">Kérlek add meg bejelentkezési adataidat!</p>
 
               <form @submit.prevent="Login">
               <div class="form-outline form-white mb-4">
@@ -19,11 +19,11 @@
                
               </div>
               <div class="form-outline form-white mb-4">
-                <label class="form-label" for="typePasswordX" >Password</label>
+                <label class="form-label" for="typePasswordX" >Jelszó</label>
                 <input type="password" id="typePasswordX" class="form-control form-control-lg" v-model="password" required />
                 
               </div>
-              <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+              <button class="btn btn-outline-light btn-lg px-5" type="submit">Bejelentkezés</button>
                </form>
               <div class="d-flex justify-content-center text-center mt-4 pt-1">
               </div>
@@ -31,7 +31,7 @@
             </div>
 
             <div>
-              <p class="mb-0">Don't have an account? <a class="text-white-50 fw-bold"> <router-link to="/register">Register Here</router-link></a>
+              <p class="mb-0">Nincs még fiókod? <a class="text-white-50 fw-bold"> <router-link to="/register">Hozz létre egy újat</router-link></a>
               </p>
             </div>
 

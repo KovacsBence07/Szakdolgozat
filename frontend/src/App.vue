@@ -10,28 +10,28 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <router-link to="/home" class="nav-link">Home</router-link>
+        <router-link to="/home" class="nav-link">Főoldal</router-link>
       </li>
       <li class="nav-item">
         <span v-if="isLoggedIn">
           <router-link to="/products" class="nav-link"
-            >Admin products</router-link>
+            >Admin felület</router-link>
         </span> 
       </li>
       <span v-if="isLoggedIn">
-          <router-link to="/add" class="nav-link">Add Product</router-link>
+          <router-link to="/add" class="nav-link">Termék hozzáadása</router-link>
         </span>
-        <router-link to="/userProducts" class="nav-link">User products</router-link>
-        <router-link to="/about" class="nav-link">About</router-link>
+        <router-link to="/userProducts" class="nav-link">Termékeink</router-link>
+        <router-link to="/about" class="nav-link">Rólunk</router-link>
     </ul>
       <span v-if="isLoggedIn">
-            <a href="#" class="btn btn-danger" @click="Logout">Log out</a>
+            <a href="#" class="btn btn-danger" @click="Logout">Kijelentkezés</a>
           </span>
           <span v-else>
-            <router-link to="/login" class="btn btn-primary" style="margin-right:15px">Login</router-link>
-            <router-link to="/register" class="btn btn-primary">Register</router-link>
+            <router-link to="/login" class="btn btn-primary" style="margin-right:15px">Bejelentkezés</router-link>
+            <router-link to="/register" class="btn btn-primary">Regisztráció</router-link>
           </span>
-          <a class="btn btn-dark" href="#" id="cart" style="margin-left:15px;" ><i></i> View Cart</a>
+          <a class="btn btn-dark" href="#" id="cart" style="margin-left:15px;" ><i></i> Kosár</a>
     
   </div>
 </nav>

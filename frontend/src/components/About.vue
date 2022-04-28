@@ -8,7 +8,7 @@
     </div><!-- Call to Action-->
     <div class="card my-5 text-dark py-4 text-center">
         <div class="card-body">
-            <p class="text-dark m-0 font-weight-bold" style="font-size: 2.5rem">About us</p>
+            <p class="text-dark m-0 font-weight-bold" style="font-size: 2.5rem">Rólunk</p>
         </div>
     </div><!-- Content Row-->
     <div class="row gx-4 gx-lg-5">

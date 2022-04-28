@@ -1,9 +1,9 @@
 <template>
   <div v-if="currentProducts" class="edit-form">
-    <h4>Product</h4>
+    <h4>Termék</h4>
     <form>
       <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title">Termék megnevezése</label>
         <input
           type="text"
           class="form-control"
@@ -12,7 +12,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="img">Image url</label>
+        <label for="img">Kép url</label>
         <input
           type="text"
           class="form-control"
@@ -21,7 +21,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="description">Description</label>
+        <label for="description">Termék leírása</label>
         <input
           type="text"
           class="form-control"
@@ -30,40 +30,40 @@
         />
       </div>
       <div class="form-group">
-        <label for="price">Price</label>
+        <label for="price">Termék ára</label>
         <input type="text" class="form-control" id="price"
           v-model="currentProducts.price"
         />
       </div>
       <div class="form-group">
-        <label><strong>Status:</strong></label>
-        {{ currentProducts.published ? "In stock" : "Product is out of stock" }}
+        <label><strong>Termék státusza:</strong></label>
+        {{ currentProducts.published ? "Raktáron" : "A termék jelenleg nincs készleten" }}
       </div>
     </form>
     <button class="btn btn-primary mr-2"
       v-if="currentProducts.published"
-      @click="updatePublished(false)">OutOfStock
+      @click="updatePublished(false)">Nincs raktáron
     </button>
     <button v-else class="btn btn-primary mr-2"
       @click="updatePublished(true)"
     >
-      InStock
+      Raktáron
     </button>
     <button class="btn btn-danger mr-2"
       @click="deleteProduct"
     >
-      Delete
+      Törlés
     </button>
     <button type="submit" class="btn btn-success"
       @click="updateProduct"
     >
-      Update
+      Frissítés
     </button>
     <p>{{ message }}</p>
   </div>
   <div v-else>
     <br />
-    <p>Please click on a Product...</p>
+    <p>Válasszon ki egy terméket</p>
   </div>
 </template>
 
