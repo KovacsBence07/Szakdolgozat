@@ -30,7 +30,9 @@
           <h4>You submitted successfully!</h4>
           <button class="btn btn-success" @click="newProduct">Add</button>
       </div>
+      
   </div>
+  
 </div>
   
 </template>

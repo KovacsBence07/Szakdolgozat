@@ -76,7 +76,7 @@ body {
     background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
     background: linear-gradient(to right, #e8cbc0, #636fa4); 
 }
-* {box-sizing: border-box}
+/* {box-sizing: border-box}
 
 /* Add padding to containers */
 

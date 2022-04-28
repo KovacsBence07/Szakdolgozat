@@ -1,54 +1,118 @@
 <template>
 <div>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-<!-- For demo purpose -->
-<div class="container py-5">
-    <div class="row text-center text-white">
-        <div class="col-lg-8 mx-auto">
-            <h1 class="display-4">About us</h1>
-            <p class="lead mb-0"><b> We created this website with Vue.js, Node.js, MongoDB and Firebase.</b></p>
+  <div class="container px-4 px-lg-5">
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+
+    </div><!-- Call to Action-->
+    <div class="card my-5 text-dark py-4 text-center">
+        <div class="card-body">
+            <p class="text-dark m-0 font-weight-bold" style="font-size: 2.5rem">About us</p>
         </div>
-    </div>
-</div><!-- End -->
-
-
-<div class="container">
-    <div class="row text-center">
-        <div class="col-xl-6 col-sm-6 mb-5">
-            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="@/assets/images/bence.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+    </div><!-- Content Row-->
+    <div class="row gx-4 gx-lg-5">
+        <div class="col-md-6 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                     <div class="bg-white rounded shadow-sm py-5 px-4"><img src="@/assets/images/bence.jpg" alt="" width="50%" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Kovács Bence Dominik</h5><span class="small text-uppercase text-muted">Tanuló</span>
+                </div>
+                  </div>
                 
             </div>
         </div>
-
-        
-        <div class="col-xl-6 col-sm-6 mb-5">
-            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="@/assets/images/tomi.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="col-md-6 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                     <div class="bg-white rounded shadow-sm py-5 px-4"><img src="@/assets/images/tomi.jpg" alt="" width="50%" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Szabó Tamás Martin</h5><span class="small text-uppercase text-muted">Tanuló</span>
+                </div>
+                  </div>
                 
             </div>
         </div>
+        
+        
     </div>
-    
-</div> 
-
+</div>
+<div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Company Name</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Kovács Bence Dominik és Szabó Tamás Martin Szakdolgozata © 2022</p>
+            </div>
+        </footer>
+    </div>
 </div>
 </template>
 
 <script>
-export default {
+import { ref, onBeforeMount } from "vue";
+import firebase from "firebase";
 
-}
+export default {
+  setup() {
+    const name = ref("");
+    const isLoggedIn = ref(false);
+    onBeforeMount(() => {
+      const user = firebase.auth().currentUser;
+      if (user) {
+        name.value = user.email.split("@")[0];
+      }
+    });
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        isLoggedIn.value = true; // if we have a user
+      } else {
+        isLoggedIn.value = false; // if we do not
+      }
+    });
+
+    return {
+      name,
+      isLoggedIn,
+    };
+  },
+};
 </script>
 
 <style>
+
 body {
   
     background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
     background: linear-gradient(to right, #e8cbc0, #636fa4); 
 }
-
+.card {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
 .footer-dark {
   padding:50px 0;
   color:#f0f9ff;
@@ -138,4 +202,5 @@ body {
   font-size:13px;
   margin-bottom:0;
 }
+
 </style>
