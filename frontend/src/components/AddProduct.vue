@@ -21,7 +21,10 @@
               <label for="price">Price</label>
               <input type="number" name="price" id="price" class="form-control" required v-model="products.price">
           </div>
-          <button @click="saveProduct" class="btn btn-success" id="submitbtn">Submit</button>
+          <div class="d-flex justify-content-center">
+              <button @click="saveProduct" class="btn btn-success" id="submitbtn">Submit</button>
+          </div>
+          
       </div>
       <div v-else>
           <h4>You submitted successfully!</h4>

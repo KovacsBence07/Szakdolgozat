@@ -15,53 +15,24 @@
 
 <div class="container">
     <div class="row text-center">
-        <!-- Team item -->
         <div class="col-xl-6 col-sm-6 mb-5">
             <div class="bg-white rounded shadow-sm py-5 px-4"><img src="@/assets/images/bence.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Kovács Bence Dominik</h5><span class="small text-uppercase text-muted">Tanuló</span>
                 
             </div>
-        </div><!-- End -->
+        </div>
 
-        <!-- Team item -->
+        
         <div class="col-xl-6 col-sm-6 mb-5">
             <div class="bg-white rounded shadow-sm py-5 px-4"><img src="@/assets/images/tomi.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Szabó Tamás Martin</h5><span class="small text-uppercase text-muted">Tanuló</span>
                 
             </div>
-        </div><!-- End -->
+        </div>
     </div>
-</div>
-  <div class="footer-dark">
-        
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3>Company Name</h3>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
-                    </div>
-                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
-                </div>
-                <p class="copyright">Kovács Bence Dominik és Szabó Tamás Martin Szakdolgozata © 2022</p>
-            </div>
-       
-    </div>
+    
+</div> 
+
 </div>
 </template>
 
@@ -77,19 +48,7 @@ body {
     background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
     background: linear-gradient(to right, #e8cbc0, #636fa4); 
 }
-button{
-    border: 2px solid black;
-    font: 300 15px;
-    line-height: 16px;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 22px;
-    text-decoration: none;
-    -moz-transition: 0.2s all;
-    -o-transition: 0.2s all;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
-}
+
 .footer-dark {
   padding:50px 0;
   color:#f0f9ff;

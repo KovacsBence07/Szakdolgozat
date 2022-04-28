@@ -61,7 +61,7 @@
         </div>
         <router-link
           :to="'/products/' + currentProduct._id"
-          class="badge badge-warning"
+          class="btn btn-warning" style="font-size:100%"
           >Edit</router-link
         >
       </div>
@@ -146,19 +146,7 @@ body {
     background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
     background: linear-gradient(to right, #e8cbc0, #636fa4); 
 }
-button{
-    border: 2px solid black;
-    font: 300 15px;
-    line-height: 16px;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 22px;
-    text-decoration: none;
-    -moz-transition: 0.2s all;
-    -o-transition: 0.2s all;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
-}
+
 
 
 </style>

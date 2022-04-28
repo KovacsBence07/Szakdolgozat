@@ -88,19 +88,7 @@ export default {
 </script>
 
 <style>
-button{
-    border: 2px solid black;
-    font: 300 15px;
-    line-height: 16px;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 22px;
-    text-decoration: none;
-    -moz-transition: 0.2s all;
-    -o-transition: 0.2s all;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
-}
+
 body {
   
     background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);

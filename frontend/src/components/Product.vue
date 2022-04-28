@@ -40,23 +40,21 @@
         {{ currentProducts.published ? "In stock" : "Product is out of stock" }}
       </div>
     </form>
-    <button class="badge badge-primary mr-2"
+    <button class="btn btn-primary mr-2"
       v-if="currentProducts.published"
-      @click="updatePublished(false)"
-    >
-      OutOfStock
+      @click="updatePublished(false)">OutOfStock
     </button>
-    <button v-else class="badge badge-primary mr-2"
+    <button v-else class="btn btn-primary mr-2"
       @click="updatePublished(true)"
     >
       InStock
     </button>
-    <button class="badge badge-danger mr-2"
+    <button class="btn btn-danger mr-2"
       @click="deleteProduct"
     >
       Delete
     </button>
-    <button type="submit" class="badge badge-success"
+    <button type="submit" class="btn btn-success"
       @click="updateProduct"
     >
       Update
@@ -141,18 +139,5 @@ export default {
 .edit-form {
   max-width: 300px;
   margin: auto;
-}
-button{
-    border: 2px solid black;
-    font: 300 15px;
-    line-height: 16px;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 22px;
-    text-decoration: none;
-    -moz-transition: 0.2s all;
-    -o-transition: 0.2s all;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
 }
 </style>

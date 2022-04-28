@@ -79,9 +79,7 @@ body {
 * {box-sizing: border-box}
 
 /* Add padding to containers */
-.container {
-  padding: 16px;
-}
+
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
