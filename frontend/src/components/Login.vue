@@ -47,7 +47,9 @@ export default {
 }
 
 body {
-  background-color: rgb(218, 218, 218);
+  background: #e8cbc0;
+    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+    background: linear-gradient(to right, #e8cbc0, #636fa4);
   font-family: "Poppins", sans-serif;
 }
 

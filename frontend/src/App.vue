@@ -1,69 +1,61 @@
 <template>
+   <div>
   <div>
-    <div class="wrapper">
-      <div class="menu">
-        <a href="#"> <i class="fa fa-home"> </i> </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Electrical shop</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-        <!-- <div class="dropdown">
-                <a href="#"> Categories </a>
-                <div class="submenu">
-                    <div class="submenu1">
-                        <a href="#"> Decor </a>
-                        <div class="decorsubmenu">
-                            <a href="#"> Wall Decor </a>
-                            <a href="#"> Home Decor </a>
-                        </div>
-                    </div>
-                    <div class="submenu2">
-                        <a href="#"> Accesorries </a>
-                        <div class="accessoriessubmenu">
-                            <a href="#"> Earring </a>     
-                            <a href="#"> Bracelet </a>
-                            <a href="#"> Neck Piece </a>
-                            <a href="#"> Anklets </a>
-                            <a href="#"> Rings </a>
-                        </div>
-                    </div>
-                    <a href="#"> Bags </a>
-                    <a href="#"> Baskets/Boxes </a>
-                    <a href="#"> Notebooks </a>
-                    <a href="#"> Gifts </a>
-                </div>
-            </div> -->
-       
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
         <router-link to="/home" class="nav-link">Home</router-link>
+      </li>
+      <li class="nav-item">
         <span v-if="isLoggedIn">
           <router-link to="/products" class="nav-link"
             >Admin products</router-link>
-        </span>
-        <span v-if="isLoggedIn">
+        </span> 
+      </li>
+      <span v-if="isLoggedIn">
           <router-link to="/add" class="nav-link">Add Product</router-link>
         </span>
         <router-link to="/userProducts" class="nav-link"
           >User products</router-link>
         <router-link to="/about" class="nav-link">About</router-link>
-
-         <div class="menu2">
-          <span v-if="isLoggedIn">
+        
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+      <li class="nav-item">
+        
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <span v-if="isLoggedIn">
             <a href="#" @click="Logout">Log out</a>
           </span>
           <span v-else>
             <router-link to="/login" class="fa fa-sign-in"> Log in</router-link>
 
             <router-link to="/register" class="fa fa-user"> Register</router-link>
-              
+              <a href="#" id="cart">
+              <i class="fa fa-shopping-cart"></i> View Cart
+              </a>
 
           </span>
-              <router-link to="/cart" class="fa fa-shopping-cart"> Cart</router-link>
-              
-        </div>
-      </div>
-      <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
-      
+    </form>
+  </div>
+</nav>
     </div>
     <div class="container mt-3"></div>
     <router-view />
@@ -77,13 +69,15 @@ import { onBeforeMount, ref } from "vue";
 import firebase from "firebase";
 import { useRouter, useRoute } from "vue-router";
 
+
+
 export default {
   name: "app",
   setup() {
     const router = useRouter();
     const route = useRoute();
     const isLoggedIn = ref(false);
-    
+
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
         isLoggedIn.value = true; // Ha be van jelentkezve
@@ -126,7 +120,7 @@ export default {
 .menu2{
   float: right;
   display: flex;
-  margin-left: 1200px;
+  margin-left: 1300px;
 }
 .menu {
   background-color: #36486b;
@@ -143,7 +137,6 @@ export default {
   background-color: white;
   color: #36486b;
 }
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -200,5 +193,4 @@ export default {
   display: block;
 }
 /*Right NavBar*/
-
 </style>
