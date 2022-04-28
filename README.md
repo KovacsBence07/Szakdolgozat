@@ -1,2 +1,2 @@
 # Szakdolgozat
-Kovács Bence és Szabó Tamás szakdolgozata
+> Kovács Bence és Szabó Tamás szakdolgozata

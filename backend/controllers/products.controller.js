@@ -122,15 +122,15 @@ exports.deleteAll = (req,res) =>{
 };
 
 // Published Products
-exports.findAllPublished = (req,res) =>{
-    Products.find({published:true})
-        .then(data => {
-            res.send(data);
-        })
-        .catch(err =>{
-            res.status(500).send({
-                message:
-                    err.message || "Some error occured while retrieving products."
-            });
-        });
-};
+// exports.findAllPublished = (req,res) =>{
+//     Products.find({published:true})
+//         .then(data => {
+//             res.send(data);
+//         })
+//         .catch(err =>{
+//             res.status(500).send({
+//                 message:
+//                     err.message || "Some error occured while retrieving products."
+//             });
+//         });
+// };

@@ -17,5 +17,5 @@ module.exports = app =>{
     router.delete("/", Products.deleteAll);
     app.use('/api/products',router);
     //Published
-    router.get("/published", Products.findAllPublished)
+    // router.get("/published", Products.findAllPublished)
 };
