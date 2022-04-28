@@ -22,7 +22,7 @@
                     <h2 class="card-title">Billentyűzetek</h2>
                     <p class="card-text">Egy jó billentyűzet sokat segíthet mint a játék élményben, mint pedig stílusod kimutatására. Böngészd át billentyűzet választékunkat, hogy megtaláld a neked legmegfelelőbb terméket!</p>
                 </div>
-                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Billentyűzetek</a></div>
+                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Ugrás a termékekhez</a></div>
             </div>
         </div>
         <div class="col-md-4 mb-5">
@@ -31,7 +31,7 @@
                     <h2 class="card-title">Monitorok</h2>
                     <p class="card-text">Egy megfelelő monitor elengedhetetlen egy gamer számára! Tekintsd meg csúcskategóriás termékeinket és lépj a következő szintre!</p>
                 </div>
-                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Monitorok</a></div>
+                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Ugrás a termékekhez</a></div>
             </div>
         </div>
         <div class="col-md-4 mb-5">
@@ -40,7 +40,7 @@
                     <h2 class="card-title">Egerek</h2>
                     <p class="card-text">Találd meg a neked legmegfelelőbb gamer egeret! Tekintsd meg termékeinket!</p>
                 </div>
-                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Egerek</a></div>
+                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Ugrás a termékekhez</a></div>
             </div>
         </div>
         

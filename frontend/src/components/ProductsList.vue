@@ -6,7 +6,7 @@
         <input
           type="text"
           class="form-control"
-          placeholder="Search by title"
+          placeholder="Keresés név szerint"
           v-model="title"
         />
         <div class="input-group-append">
@@ -15,13 +15,13 @@
             type="button"
             @click="searchTitle"
           >
-            Search
+            Keresés
           </button>
         </div>
       </div>
     </div>
     <div class="col-md-6">
-      <h4>Products List</h4>
+      <h4>Termék lista</h4>
       <ul class="list-group">
         <li
           class="list-group-item"
@@ -34,40 +34,40 @@
         </li>
       </ul>
       <button class="m-3 btn btn-sm btn-danger" @click="removeAllProducts">
-        Remove All
+        Összes törlése
       </button>
     </div>
     <div class="col-md-6">
       <div v-if="currentProduct">
-        <h4>Product</h4>
+        <h4>Termék</h4>
         <div>
-          <label><strong>Title:</strong></label> {{ currentProduct.title }}
+          <label><strong>Termék neve:</strong></label> {{ currentProduct.title }}
         </div>
         <div class="img">
            <img :src="currentProduct.img" alt="Card image cap" style="width: 100%" />
         </div>
         <div>
-          <label><strong>Description:</strong></label>
+          <label><strong>Termék leírás:</strong></label>
           {{ currentProduct.description }}
         </div>
         <div>
-          <label><strong>Price:</strong></label> {{ currentProduct.price }}
+          <label><strong>Termék ár:</strong></label> {{ currentProduct.price }}
         </div>
         <div>
-          <label><strong>Status:</strong></label>
+          <label><strong>Termék státusza:</strong></label>
           {{
-            currentProduct.published ? "In stock" : "Product is out of stock"
+            currentProduct.published ? "Raktáron" : "A termék jelenleg nincs raktáron"
           }}
         </div>
         <router-link
           :to="'/products/' + currentProduct._id"
           class="btn btn-warning" style="font-size:100%"
-          >Edit</router-link
+          >Szerkesztés</router-link
         >
       </div>
       <div v-else>
         <br />
-        <p>Please click on a Product</p>
+        <p>Kérem válasszon ki egy terméket</p>
       </div>
     </div>
   </div>
