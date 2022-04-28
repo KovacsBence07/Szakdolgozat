@@ -28,7 +28,7 @@
             <a href="#" class="btn btn-danger" @click="Logout">Log out</a>
           </span>
           <span v-else>
-            <router-link to="/login" class="btn btn-primary" style="margin-right:10px">Login</router-link>
+            <router-link to="/login" class="btn btn-primary" style="margin-right:15px">Login</router-link>
             <router-link to="/register" class="btn btn-primary">Register</router-link>
           </span>
           <a class="btn btn-dark" href="#" id="cart" style="margin-left:15px;" ><i></i> View Cart</a>
