@@ -1,16 +1,46 @@
 <template>
   <div>
-    <section>
-      <div class="auth">
-        <h1>Login</h1>
-        <form @submit.prevent="Login">
-          <input type="text" placeholder="Email" name="email" v-model="email" required />
-          <input type="password" placeholder="Password" name="psw" v-model="password" required/>
-          <button type="submit">Login</button>
-        </form>
-        <p class="register">Not a member? <span>Register</span></p>
+    <section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-5 mt-md-4 pb-5">
+
+              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+              <p class="text-white-50 mb-5">Please enter your login and password!</p>
+
+              <form @submit.prevent="Login">
+              <div class="form-outline form-white mb-4">
+                 <label class="form-label" for="typeEmailX">Email</label> 
+                <input type="text" id="typeEmailX" class="form-control form-control-lg" v-model="email" required />
+               
+              </div>
+              <div class="form-outline form-white mb-4">
+                <label class="form-label" for="typePasswordX" >Password</label>
+                <input type="password" id="typePasswordX" class="form-control form-control-lg" v-model="password" required />
+                
+              </div>
+              <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+               </form>
+              <div class="d-flex justify-content-center text-center mt-4 pt-1">
+              </div>
+
+            </div>
+
+            <div>
+              <p class="mb-0">Don't have an account? <a class="text-white-50 fw-bold"> <router-link to="/register">Register Here</router-link></a>
+              </p>
+            </div>
+
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   </div>
 </template>
 
@@ -47,95 +77,21 @@ export default {
 }
 
 body {
-  background: #e8cbc0;
+  
     background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
-    background: linear-gradient(to right, #e8cbc0, #636fa4);
-  font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #e8cbc0, #636fa4); 
 }
-
-.auth {
-  background-color: #ffffff;
-  display: inline-block;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-}
-
-.auth h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  padding: 0 0 2rem 0;
-  border-bottom: 0.1rem solid silver;
-}
-
-.auth form {
-  margin: 1rem;
-}
-
-.auth input {
-  width: 100%;
-  margin-top: 2rem;
-  padding: 0 0.5rem;
-  height: 4rem;
-  font-size: 1.4rem;
-  border: none;
-  background: none;
-  outline: none;
-  border-bottom: 1.5px solid rgb(163, 163, 163);
-}
-
-.auth input::placeholder {
-  color: rgb(163, 163, 163);
-}
-
-.auth input:hover {
-  border-bottom: 1.5px solid #0086da;
-}
-
-.auth form p {
-  font-size: 1.3rem;
-  padding: 3rem 0.5rem 0rem 0.5rem;
-  color: rgb(163, 163, 163);
-}
-
-.auth form p:hover {
-  color: rgb(80, 80, 80);
-  cursor: pointer;
-}
-
-.auth button[type="submit"] {
-  display: block;
-  margin: 2rem auto;
-  font-size: 1.6rem;
-  padding: 0.9rem 2.2rem;
-  border-radius: 1.7rem;
-  border: none;
-  width: 90%;
-  background-color: #0086da;
-  color: #ffffff;
-  font-weight: 500;
-}
-
-.auth button[type="submit"]:hover {
-  cursor: pointer;
-}
-
-.auth .register {
-  text-align: center;
-  font-size: 1.3rem;
-}
-
-.auth .register span {
-  color: #007ecc;
-  font-weight: 600;
-}
-
-.auth .register span:hover {
-  color: #005b94;
-  font-weight: 600;
-  cursor: pointer;
+button{
+    border: 2px solid black;
+    font: 300 15px;
+    line-height: 16px;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 22px;
+    text-decoration: none;
+    -moz-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
 }
 </style>

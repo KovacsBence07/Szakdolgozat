@@ -1,14 +1,13 @@
 <template>
 <div>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <div class="container px-4 px-lg-5">
     <!-- Heading Row-->
     <div class="row gx-4 gx-lg-5 align-items-center my-5">
         <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://cdn.prohardver.hu/dl/cnt/2022-01/173210/tclb.jpg" alt="..." /></div>
         <div class="col-lg-5">
-            <h1 class="font-weight-light">Business Name or Tagline</h1>
-            <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p><a class="btn btn-primary" href="#!">Call to Action!</a>
+            <h1 class="font-weight-light">Electrical shop </h1>
+            <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p><a class="btn btn-primary" href="/UserProducts">Products</a>
         </div>
     </div><!-- Call to Action-->
     <div class="card text-white bg-secondary my-5 py-4 text-center">
@@ -73,7 +72,7 @@
                     </div>
                     <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
                 </div>
-                <p class="copyright">Company Name © 2018</p>
+                <p class="copyright">Kovács Bence Dominik és Szabó Tamás Martin Szakdolgozata © 2022</p>
             </div>
         </footer>
     </div>
@@ -111,6 +110,24 @@ export default {
 </script>
 
 <style>
+button{
+    border: 2px solid black;
+    font: 300 15px;
+    line-height: 16px;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 22px;
+    text-decoration: none;
+    -moz-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+body {
+  
+    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+    background: linear-gradient(to right, #e8cbc0, #636fa4); 
+}
 .card {
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     max-width: 100%;

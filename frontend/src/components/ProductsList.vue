@@ -1,4 +1,5 @@
 <template>
+<div class="container mt-5">
   <div class="list row">
     <div class="col-md-8">
       <div class="input-group mb-3">
@@ -70,6 +71,8 @@
       </div>
     </div>
   </div>
+</div>
+  
 </template>
 
 <script>
@@ -138,7 +141,24 @@ export default {
   max-width: 750px;
   margin: auto;
 }
-.img{
-    height: 400px;
+body {
+  
+    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+    background: linear-gradient(to right, #e8cbc0, #636fa4); 
 }
+button{
+    border: 2px solid black;
+    font: 300 15px;
+    line-height: 16px;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 22px;
+    text-decoration: none;
+    -moz-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+
 </style>

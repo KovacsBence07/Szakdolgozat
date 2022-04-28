@@ -6,7 +6,7 @@
     <div class="col" v-for="product in products"
             :key="product._id">
       <div class="card">
-            <img class="imgproduct" :src="product.img" alt="Card image cap"/>
+            <img :src="product.img" alt="Card image cap"/>
             <h1>{{ product.title }}</h1>
             <p class="price">{{ product.price }} $</p>
             <p>Description: {{ product.description }}</p>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
                 </div>
-                <p class="copyright">Company Name © 2018</p>
+                <p class="copyright">Kovács Bence Dominik és Szabó Tamás Martin Szakdolgozata © 2022</p>
             </div>
         </footer>
     </div>
@@ -88,24 +88,29 @@ export default {
 </script>
 
 <style>
-
+button{
+    border: 2px solid black;
+    font: 300 15px;
+    line-height: 16px;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 22px;
+    text-decoration: none;
+    -moz-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+body {
+  
+    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+    background: linear-gradient(to right, #e8cbc0, #636fa4); 
+}
 .col{
   padding-bottom: 25px;
   padding-top: 25px;
 }
-.popularProducts {
-  float: left;
-  margin-left: 85px;
-}
-.divbody {
-  margin-left: 35px;
-}
-.welcomemess {
-  color: pink;
-  font-size: 2rem;
-  text-align: center;
-  padding-right: 30px;
-}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /* margin: auto; */
