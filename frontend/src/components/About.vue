@@ -15,7 +15,7 @@
         <div class="col-md-6 mb-5">
             <div class="card h-100">
                 <div class="card-body">
-                     <div class="bg-white rounded shadow-sm py-5 px-4"><img src="@/assets/images/bence.jpg" alt="" width="50%" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                     <div class="bg-white  py-5 px-4"><img src="@/assets/images/bence.jpg" alt="" width="60%" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Kovács Bence Dominik</h5><span class="small text-uppercase text-muted">Tanuló</span>
                 </div>
                   </div>
@@ -25,7 +25,7 @@
         <div class="col-md-6 mb-5">
             <div class="card h-100">
                 <div class="card-body">
-                     <div class="bg-white rounded shadow-sm py-5 px-4"><img src="@/assets/images/tomi.jpg" alt="" width="50%" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                     <div class="bg-white  py-5 px-4"><img src="@/assets/images/tomi.jpg" alt="" width="60%" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Szabó Tamás Martin</h5><span class="small text-uppercase text-muted">Tanuló</span>
                 </div>
                   </div>
