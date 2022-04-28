@@ -1,21 +1,18 @@
 {
 	"info": {
-		"_postman_id": "ce2538bf-b722-451d-849f-b45f7ae844ba",
-		"name": "ProductsAPITest",
+		"_postman_id": "79f8a448-ac3a-4219-8840-643d4f088803",
+		"name": "Vizsga_backend_tesztek",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Create a new products",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {}
-			},
+			"name": "Uj termek hozzaadasa",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\":\"Product 3\",\r\n    \"description\":\"This is a product 3 product\",\r\n    \"price\": \"420900\"\r\n}",
+					"raw": "{\r\n    \"title\": \"SteelSeries Egér\",\r\n    \"description\": \"Ez egy SteelSeries egér\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -24,6 +21,77 @@
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Egy termék lekérdezése ID alapján",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/626adb161aa47894a450ecfb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"626adb161aa47894a450ecfb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Egy termék frissítése id alapján",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Ez egy frissítés a termék leírásához\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/626adb161aa47894a450ecfb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"626adb161aa47894a450ecfb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Összes termék melyben 'SteelSeries' szerepel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products?title=SteelSeries",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -35,9 +103,8 @@
 					],
 					"query": [
 						{
-							"key": "Content-Type",
-							"value": null,
-							"disabled": true
+							"key": "title",
+							"value": "SteelSeries"
 						}
 					]
 				}
@@ -45,95 +112,12 @@
 			"response": []
 		},
 		{
-			"name": "Retrieve a single product",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/products/623e3979f62e8743ef074d01",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"products",
-						"623e3979f62e8743ef074d01"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update a product",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\":\"Product 2\",\r\n    \"description\": \"This is a product 2 product\",\r\n    \"price\": \"69420\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/products/623e3979f62e8743ef074d01",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"products",
-						"623e3979f62e8743ef074d01"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Retrieve all products",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/products",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"products"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete a product by id",
+			"name": "Egy termék törlése ID alapján",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/products/623e3984f62e8743ef074d03",
+					"raw": "http://localhost:8080/api/products/626adb161aa47894a450ecfb",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -142,14 +126,14 @@
 					"path": [
 						"api",
 						"products",
-						"623e3984f62e8743ef074d03"
+						"626adb161aa47894a450ecfb"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Delete all products",
+			"name": "Összes termék törlése",
 			"request": {
 				"method": "DELETE",
 				"header": [],
