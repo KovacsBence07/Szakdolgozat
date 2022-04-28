@@ -8,8 +8,8 @@
       <div class="card">
             <img :src="product.img" alt="Card image cap"/>
             <h1>{{ product.title }}</h1>
-            <p class="price">{{ product.price }} $</p>
-            <p>Termék leírás {{ product.description }}</p>
+            <p class="price">{{ product.price }} Ft</p>
+            <p>{{ product.description }}</p>
             <p>
               {{ product.published ? "Raktáron" : "A termék jelenleg nincs raktáron!" }}
             </p>
