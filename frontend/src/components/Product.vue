@@ -31,32 +31,34 @@
       </div>
       <div class="form-group">
         <label for="price">Termék ára</label>
-        <input type="text" class="form-control" id="price"
+        <input
+          type="text"
+          class="form-control"
+          id="price"
           v-model="currentProducts.price"
         />
       </div>
       <div class="form-group">
         <label><strong>Termék státusza:</strong></label>
-        {{ currentProducts.published ? "Raktáron" : "A termék jelenleg nincs készleten" }}
+        {{
+          currentProducts.published
+            ? "Raktáron"
+            : "A termék jelenleg nincs készleten"
+        }}
       </div>
     </form>
-    <button class="btn btn-primary mr-2"
+    <button
+      class="btn btn-primary mr-2"
       v-if="currentProducts.published"
-      @click="updatePublished(false)">Nincs raktáron
-    </button>
-    <button v-else class="btn btn-primary mr-2"
-      @click="updatePublished(true)"
+      @click="updatePublished(false)"
     >
+      Nincs raktáron
+    </button>
+    <button v-else class="btn btn-primary mr-2" @click="updatePublished(true)">
       Raktáron
     </button>
-    <button class="btn btn-danger mr-2"
-      @click="deleteProduct"
-    >
-      Törlés
-    </button>
-    <button type="submit" class="btn btn-success"
-      @click="updateProduct"
-    >
+    <button class="btn btn-danger mr-2" @click="deleteProduct">Törlés</button>
+    <button type="submit" class="btn btn-success" @click="updateProduct">
       Frissítés
     </button>
     <p>{{ message }}</p>
@@ -88,7 +90,7 @@ export default {
           console.log(e);
         });
     },
-    updatePublished(status){
+    updatePublished(status) {
       var data = {
         id: this.currentProducts._id,
         title: this.currentProducts.title,
@@ -97,13 +99,13 @@ export default {
         img: this.currentProducts.img,
         published: status,
       };
-      ProductsDataService.update(this.currentProducts._id,data)
-        .then(response => {
+      ProductsDataService.update(this.currentProducts._id, data)
+        .then((response) => {
           console.log(response.data);
           this.currentProducts.published = status;
           this.message = "The status is updated successfully!";
         })
-        .catch(e => {
+        .catch((e) => {
           console.log(e);
         });
     },

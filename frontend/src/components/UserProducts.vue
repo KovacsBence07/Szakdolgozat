@@ -1,76 +1,104 @@
 <template>
-<div>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4" id="carddesign">
-    <div class="col" v-for="product in products"
-            :key="product._id">
-      <div class="card">
-            <img :src="product.img" alt="Card image cap"/>
+  <div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="carddesign">
+        <div class="col" v-for="product in products" :key="product._id">
+          <div class="card">
+            <img :src="product.img" alt="Card image cap" />
             <h1>{{ product.title }}</h1>
             <p class="price">{{ product.price }} Ft</p>
             <p>{{ product.description }}</p>
             <p>
-              {{ product.published ? "Raktáron" : "A termék jelenleg nincs raktáron!" }}
+              {{
+                product.published
+                  ? "Raktáron"
+                  : "A termék jelenleg nincs raktáron!"
+              }}
             </p>
-            <p><button @click="AddToCart(product)">Hozzáadás kosárhoz</button></p>
+            <p>
+              <button @click="AddToCart(product)">Hozzáadás kosárhoz</button>
+            </p>
           </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
     <div class="col">
       <h2>Kosarad</h2>
       <table class="table table-borderless">
         <thead>
           <tr>
-            <th scope="col"><button class="btn btn-danger" @click="ClearCart(product)">Kosár törlése</button></th>
+            <th scope="col">
+              <button class="btn btn-danger" @click="ClearCart(product)">
+                Kosár törlése
+              </button>
+            </th>
             <th scope="col"></th>
             <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="item in cart" :key="item._id">
-            <td>{{item.title}}</td>
-            <td>{{item.price}} Ft</td>
-            <td><button class="btn btn-danger" @click="RemoveFromCart(index)">Eltávolítás</button></td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.price }} Ft</td>
+            <td>
+              <button class="btn btn-danger" @click="RemoveFromCart(index)">
+                Eltávolítás
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
       <button @click="Pay()" class="btn btn-success">Megrendelés</button>
     </div>
 
-  <div class="footer-dark">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Szolgáltatásaink</h3>
-                        <ul>
-                            <li><a> <router-link to="/home">Főoldal</router-link></a></li>
-                            <li><a> <router-link to="/UserProducts">Termékeink</router-link></a></li>
-                            <li><a> <router-link to="/About">Rólunk</router-link></a></li>
-                        </ul>
-                    </div>
-                    <!-- <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div> -->
-                    <div class="col-md-6 item text">
-                        <h3>Electric shop</h3>
-                        <p>A webáruházunkban sokféle periféria található meg, mintpéldául egér, monitor és billentyűzetek. Kizárólag olyan termékeket forgalmazunk amelyek a profi esportolóknak és vérbeli gamereknek készültek.</p>
-                    </div>
-                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
-                </div>
-                <p class="copyright">Kovács Bence Dominik és Szabó Tamás Martin Szakdolgozata © 2022</p>
+    <div class="footer-dark">
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 item">
+              <h3>Szolgáltatásaink</h3>
+              <ul>
+                <li>
+                  <a> <router-link to="/home">Főoldal</router-link></a>
+                </li>
+                <li>
+                  <a>
+                    <router-link to="/UserProducts">Termékeink</router-link></a
+                  >
+                </li>
+                <li>
+                  <a> <router-link to="/About">Rólunk</router-link></a>
+                </li>
+              </ul>
             </div>
-        </footer>
+            <div class="col-md-6 item text">
+              <h3>Electric shop</h3>
+              <p>
+                A webáruházunkban sokféle periféria található meg, mintpéldául
+                egér, monitor és billentyűzetek. Kizárólag olyan termékeket
+                forgalmazunk amelyek a profi esportolóknak és vérbeli gamereknek
+                készültek.
+              </p>
+            </div>
+            <div class="col item social">
+              <a href="#"><i class="icon ion-social-facebook"></i></a
+              ><a href="#"><i class="icon ion-social-twitter"></i></a
+              ><a href="#"><i class="icon ion-social-snapchat"></i></a
+              ><a href="#"><i class="icon ion-social-instagram"></i></a>
+            </div>
+          </div>
+          <p class="copyright">
+            Kovács Bence Dominik és Szabó Tamás Martin Szakdolgozata © 2022
+          </p>
+        </div>
+      </footer>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
@@ -83,7 +111,7 @@ export default {
       currentProduct: null,
       currentIndex: -1,
       title: "",
-      cart:[]
+      cart: [],
     };
   },
   methods: {
@@ -102,20 +130,21 @@ export default {
       this.currentProduct = null;
       this.currentIndex = -1;
     },
-    AddToCart(product){
+    AddToCart(product) {
       this.cart.push(product);
-      // console.log(product)
     },
-    ClearCart(product){
+    ClearCart(product) {
       this.cart.splice(product);
     },
-    RemoveFromCart(index){
-      this.cart.splice(index,1)
+    RemoveFromCart(index) {
+      this.cart.splice(index, 1);
     },
-    Pay(){
-      this.cart=[];
-      alert("Köszönjük, hogy nálunk vásárolt, sikeresen megrendelte a termékeket")
-    }
+    Pay() {
+      this.cart = [];
+      alert(
+        "Köszönjük, hogy nálunk vásárolt, sikeresen megrendelte a termékeket"
+      );
+    },
   },
   mounted() {
     this.retrieveProducts();
@@ -124,28 +153,24 @@ export default {
 </script>
 
 <style>
-
 body {
-  
-    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
-    background: linear-gradient(to right, #e8cbc0, #636fa4); 
+  background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+  background: linear-gradient(to right, #e8cbc0, #636fa4);
 }
-.col{
+.col {
   padding-bottom: 25px;
   padding-top: 25px;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  /* margin: auto; */
   text-align: center;
   font-family: arial;
-  
 }
-.card img{
-   max-height: 450px;
-    max-width: 350px;
-    height: 250px;
+.card img {
+  max-height: 450px;
+  max-width: 350px;
+  height: 250px;
 }
 
 .price {
@@ -171,93 +196,92 @@ body {
   opacity: 0.7;
 }
 .footer-dark {
-  padding:50px 0;
-  color:#f0f9ff;
-  background-color:#282d32;
+  padding: 50px 0;
+  color: #f0f9ff;
+  background-color: #282d32;
 }
 
 .footer-dark h3 {
-  margin-top:0;
-  margin-bottom:8px;
-  font-weight:bold;
-  font-size:16px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .footer-dark ul {
-  padding:0;
-  list-style:none;
-  line-height:1.6;
-  font-size:14px;
-  margin-bottom:0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
 .footer-dark ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.6;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.6;
 }
 
 .footer-dark ul a:hover {
-  opacity:0.8;
+  opacity: 0.8;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .footer-dark .item:not(.social) {
-    text-align:center;
-    padding-bottom:20px;
+    text-align: center;
+    padding-bottom: 20px;
   }
 }
 
 .footer-dark .item.text {
-  margin-bottom:36px;
+  margin-bottom: 36px;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .footer-dark .item.text {
-    margin-bottom:0;
+    margin-bottom: 0;
   }
 }
 
 .footer-dark .item.text p {
-  opacity:0.6;
-  margin-bottom:0;
+  opacity: 0.6;
+  margin-bottom: 0;
 }
 
 .footer-dark .item.social {
-  text-align:center;
+  text-align: center;
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .footer-dark .item.social {
-    text-align:center;
-    margin-top:20px;
+    text-align: center;
+    margin-top: 20px;
   }
 }
 
 .footer-dark .item.social > a {
-  font-size:20px;
-  width:36px;
-  height:36px;
-  line-height:36px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
-  margin:0 8px;
-  color:#fff;
-  opacity:0.75;
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+  margin: 0 8px;
+  color: #fff;
+  opacity: 0.75;
 }
 
 .footer-dark .item.social > a:hover {
-  opacity:0.9;
+  opacity: 0.9;
 }
 
 .footer-dark .copyright {
-  text-align:center;
-  padding-top:24px;
-  opacity:0.3;
-  font-size:13px;
-  margin-bottom:0;
+  text-align: center;
+  padding-top: 24px;
+  opacity: 0.3;
+  font-size: 13px;
+  margin-bottom: 0;
 }
-
 </style>
