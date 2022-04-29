@@ -13,11 +13,32 @@
             <p>
               {{ product.published ? "Raktáron" : "A termék jelenleg nincs raktáron!" }}
             </p>
-            <p><button>Hozzáadás kosárhoz</button></p>
+            <p><button @click="AddToCart(product)">Hozzáadás kosárhoz</button></p>
           </div>
     </div>
   </div>
 </div>
+
+    <div class="col">
+      <h2>Kosarad</h2>
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col"><button class="btn btn-danger" @click="ClearCart(product)">Kosár törlése</button></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in cart" :key="item._id">
+            <td>{{item.title}}</td>
+            <td>{{item.price}} Ft</td>
+            <td><button class="btn btn-danger" @click="RemoveFromCart(index)">Eltávolítás</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button @click="Pay()" class="btn btn-success">Megrendelés</button>
+    </div>
 
   <div class="footer-dark">
         <footer>
@@ -55,6 +76,7 @@ export default {
       currentProduct: null,
       currentIndex: -1,
       title: "",
+      cart:[]
     };
   },
   methods: {
@@ -73,6 +95,20 @@ export default {
       this.currentProduct = null;
       this.currentIndex = -1;
     },
+    AddToCart(product){
+      this.cart.push(product);
+      // console.log(product)
+    },
+    ClearCart(product){
+      this.cart.splice(product);
+    },
+    RemoveFromCart(index){
+      this.cart.splice(index,1)
+    },
+    Pay(){
+      this.cart=[];
+      alert("Köszönjük, hogy nálunk vásárolt, sikeresen megrendelte a termékeket")
+    }
   },
   mounted() {
     this.retrieveProducts();
