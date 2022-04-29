@@ -2,19 +2,19 @@
 <div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <div class="container px-4 px-lg-5">
-    <!-- Heading Row-->
+    
     <div class="row gx-4 gx-lg-5 align-items-center my-5">
         <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://cdn.prohardver.hu/dl/cnt/2022-01/173210/tclb.jpg" alt="..." /></div>
         <div class="col-lg-5">
             <h1 class="font-weight-light">Electrical shop </h1>
             <p>A webáruházunkban sokféle periféria található meg, mintpéldául egér, monitor és billentyűzetek. Kizárólag olyan termékeket forgalmazunk amelyek a profi esportolóknak és vérbeli gamereknek készültek.</p><a class="btn btn-primary" href="/UserProducts">Termékek</a>
         </div>
-    </div><!-- Call to Action-->
+    </div>
     <div class="card text-white bg-secondary my-5 py-4 text-center">
         <div class="card-body">
             <p class="text-white m-0">Böngészd át a kínálatunkat és rájössz, hogy nem is éri meg máshonnan vásárolni!</p>
         </div>
-    </div><!-- Content Row-->
+    </div>
     <div class="row gx-4 gx-lg-5">
         <div class="col-md-4 mb-5">
             <div class="card h-100">
@@ -58,14 +58,6 @@
                             <li><a> <router-link to="/About">Rólunk</router-link></a></li>
                         </ul>
                     </div>
-                    <!-- <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div> -->
                     <div class="col-md-6 item text">
                         <h3>Electric shop</h3>
                         <p>A webáruházunkban sokféle periféria található meg, mintpéldául egér, monitor és billentyűzetek. Kizárólag olyan termékeket forgalmazunk amelyek a profi esportolóknak és vérbeli gamereknek készültek.</p>

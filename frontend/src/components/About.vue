@@ -2,15 +2,15 @@
 <div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <div class="container px-4 px-lg-5">
-    <!-- Heading Row-->
+
     <div class="row gx-4 gx-lg-5 align-items-center my-5">
 
-    </div><!-- Call to Action-->
+    </div>
     <div class="card my-5 text-dark py-4 text-center">
         <div class="card-body">
             <p class="text-dark m-0 font-weight-bold" style="font-size: 2.5rem">Rólunk</p>
         </div>
-    </div><!-- Content Row-->
+    </div>
     <div class="row gx-4 gx-lg-5">
         <div class="col-md-6 mb-5">
             <div class="card h-100">
