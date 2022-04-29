@@ -31,14 +31,7 @@
                             <li><a> <router-link to="/About">Rólunk</router-link></a></li>
                         </ul>
                     </div>
-                    <!-- <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div> -->
+                    
                     <div class="col-md-6 item text">
                         <h3>Electric shop</h3>
                         <p>A webáruházunkban sokféle periféria található meg, mintpéldául egér, monitor és billentyűzetek. Kizárólag olyan termékeket forgalmazunk amelyek a profi esportolóknak és vérbeli gamereknek készültek.</p>
@@ -101,7 +94,6 @@ body {
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  /* margin: auto; */
   text-align: center;
   font-family: arial;
   

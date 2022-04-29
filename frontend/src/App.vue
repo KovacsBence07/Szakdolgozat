@@ -58,9 +58,9 @@ export default {
 
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
-        isLoggedIn.value = true; // Ha be van jelentkezve
+        isLoggedIn.value = true; // Ha be van jelentkezve a user
       } else {
-        isLoggedIn.value = false; // Ha nincs bejelentkezve
+        isLoggedIn.value = false; // Ha nincs bejelentkezve a user
       }
     });
     onBeforeMount(() => {
@@ -80,7 +80,7 @@ export default {
         .catch((err) => alert(err.message));
     };
 
-    //A login és a reg mukszik.
+    //A login és a reg múködik.
     return {
       Logout,
       isLoggedIn,

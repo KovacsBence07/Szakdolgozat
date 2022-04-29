@@ -81,6 +81,11 @@ export default {
 </script>
 
 <style>
+body {
+  
+    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+    background: linear-gradient(to right, #e8cbc0, #636fa4); 
+}
     .submit-form{
         max-width: 400px;
         margin: auto;
