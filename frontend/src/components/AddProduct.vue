@@ -125,4 +125,29 @@ export default {
   padding: 10px 30px;
   margin-top: 5px;
 }
+
+body {
+  background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+  background: linear-gradient(to right, #e8cbc0, #636fa4);
+}
+.submit-form {
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+}
+.form-group {
+  font-size: 20px;
+}
+.form-control {
+  font-size: 15px;
+}
+.addProdtitle {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+#submitbtn {
+  padding: 10px 30px;
+  margin-top: 5px;
+}
 </style>
